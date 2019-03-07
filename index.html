@@ -6,9 +6,17 @@
     <title>Crystal Collector Game
     </title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    
 
 </head>
 
@@ -19,78 +27,81 @@
 
             <h2 class="col-12">Crystals Collector!</h2>
         </div>
+        <br>
         <div class="row">
             <p class="col-12">You will be given a random number at the start of the game.</p>
         </div>
-        <br>
+        
         <div class="row">
             <p class="col-12"> There are four crystals below. By clicking on a crystal you will add a specific amount of
                 points to your total score.
             </p>
         </div>
-        <br>
+        
         <div class="row">
             <p class="col-12">You win the game by matching your total score to random number. You lose the game if your
                 total score goes above the random number.</p>
         </div>
-        <br>
+        
         <div class="row">
             <p class="col-12">The value of each crystal is hidden from you until you click on it.</p>
         </div>
-        <br>
+        
         <div class="row">
             <p class="col-12">Each time when the game starts, the game will change the value of each crystal.</p>
         </div>
+        <br>
         <div class="row">
             <h2 class="col-5" id="target-number"></h2>
 
-            <h3 class="col-3" id="wins">Wins: 0</h3>
+            <h3 class="col-3" id="wins">Wins: </h3>
+                
+            <h3 class="col-1" id="winsNumber"></h3>
 
-            <div class="col-4"></div>
+            <div class="col-3"></div>
 
         </div>
         <div class="row">
 
             <div class="col-5"></div>
 
-            <h3 class="col-3" id="losses">Losses: 0</h3>
+            <h3 class="col-3" id="losses">Losses: </h3>
 
-            <div class="col-4"></div>
+            <h3 class="col-1" id="winsNumber"></h3>
+
+            <div class="col-3"></div>
 
         </div>
         <br>
         <div class="row">
 
-            <img class="col-3" src="assets/images/?" alt="crystal image">
+            <img class="col-3 crystal" id="crystal-1" src="assets/images/2-Star_Crystal.png" alt="crystal image">
 
-            <img class="col-3" src="assets/images/?" alt="crystal image">
+            <img class="col-3 crystal" id="crystal-2" src="assets/images/crystal_2.png" alt="crystal image">
 
-            <img class="col-3" src="assets/images/?" alt="crystal image">
+            <img class="col-3 crystal" id="crystal-3" src="assets/images/Crystal_iso8.png" alt="crystal image">
 
-            <img class="col-3" src="assets/images/?" alt="crystal image">
+            <img class="col-3 crystal" id="crystal-4" src="assets/images/Crystal_quest.png" alt="crystal image">
 
         </div>
         <div class="row">
 
             <h4 class="col-8">Your total score is: </h4>
 
-            <div class="col-4"></div>
+            <div class="col-4" id="totalScore"></div>
 
         </div>
-        <br>
-        <div class="row">
+      
 
-            <h2 class="col-8" id="totalScore">0</h2>
-
-            <div class="col-4"></div>
-
-
-        </div>
 
 
 
 
     </div>
+
+    
+
+   
 
 
 
