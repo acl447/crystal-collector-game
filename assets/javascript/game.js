@@ -5,49 +5,44 @@ $(document).ready(function () {
 
     $("#target-number").text(targetNumber);
 
-    var targetReached = false;
-
     var wins = 0;
 
     var totalScore = 0;
 
     var losses = 0;
 
-    var counter1 = 0;
-
-    function reset() {
-
-        counter1 = 0;
-        totalScore = 0;
-
-        $("#totalScore").text(totalScore);
-
-        var targetNumber = Math.floor(Math.random() * 102) + 19;
-        
-        console.log(targetNumber);
-
-        $("#target-number").text(targetNumber);
+    var randomNumberArray = [];
 
 
-    }
 
-    var randomNumber = Math.floor(Math.random() * 12) + 1;
+    for (var index = 0; index < 4; index++) {
+        randomNumberArray.push(Math.floor(Math.random() * 12) + 1);
+        console.log(randomNumberArray);
 
-    console.log(randomNumber);
+        var crystalOneNumber = randomNumberArray[0];
+
+        var crystalTwoNumber = randomNumberArray[1];
+
+        var crystalThreeNumber = randomNumberArray[2];
+
+        var crystalFourNumber = randomNumberArray[3];
+
+    };
+
+
+
 
 
     $("#crystal-1").on("click", function () {
 
+        console.log(targetNumber);
 
 
 
-        if (targetNumber > counter1) {
 
-            counter1 += randomNumber;
+        if (targetNumber > totalScore) {
 
-            console.log(counter1);
-
-            totalScore = counter1;
+            totalScore += crystalOneNumber;
 
             console.log(totalScore);
 
@@ -55,11 +50,112 @@ $(document).ready(function () {
 
         }
 
-        else if (targetNumber === counter1) {
+        else {
 
-            console.log(counter1);
+            gameOutcome();
+        }
 
-            targetReached = true;
+
+
+
+    });
+
+
+
+    $("#crystal-2").on("click", function () {
+
+        console.log(targetNumber);
+
+
+
+        if (targetNumber > totalScore) {
+
+            totalScore += crystalTwoNumber;
+
+            console.log(totalScore);
+
+            $("#totalScore").text(totalScore);
+
+        }
+
+        else {
+
+            gameOutcome();
+        }
+
+
+
+
+    });
+
+
+
+    $("#crystal-3").on("click", function () {
+
+        console.log(targetNumber);
+
+
+        if (targetNumber > totalScore) {
+
+            totalScore += crystalThreeNumber;
+
+            console.log(totalScore);
+
+            $("#totalScore").text(totalScore);
+
+        }
+
+        else {
+
+            gameOutcome();
+        }
+
+
+
+
+    });
+
+
+
+    $("#crystal-4").on("click", function () {
+
+        console.log(targetNumber);
+
+
+        if (targetNumber > totalScore) {
+
+            totalScore += crystalFourNumber;
+
+            console.log(totalScore);
+
+            $("#totalScore").text(totalScore);
+
+        }
+
+        else {
+
+
+
+            gameOutcome();
+        }
+
+
+
+
+
+
+
+
+    });
+
+
+
+    function gameOutcome() {
+
+
+        if (targetNumber === totalScore) {
+
+            console.log("matching numbers");
 
             alert("You won!");
 
@@ -67,15 +163,14 @@ $(document).ready(function () {
 
             $("#winsNumber").text(wins);
 
-            reset();
+            //reset();
+        }
 
 
-        } else if (targetNumber < counter1) {
 
-            console.log(counter1);
+        else if (targetNumber < totalScore) {
 
-            targetReached = false;
-
+            console.log("totalScore too high");
 
             alert("You lost :(. Try again!");
 
@@ -83,12 +178,10 @@ $(document).ready(function () {
 
             $("#lossesNumber").text(losses);
 
-            reset();
+            //reset();
 
         }
-
-
-    });
+    }
 
 
 
@@ -108,4 +201,36 @@ $(document).ready(function () {
 
 
 });
+
+/*function reset() {
+
+
+    totalScore = 0;
+
+    $("#totalScore").text(totalScore);
+
+    var targetNumber = Math.floor(Math.random() * 102) + 19;
+
+    console.log(targetNumber);
+
+    $("#target-number").text(targetNumber);
+
+    var randomNumberArray = [];
+
+    for (var index = 0; index < 4; index++) {
+        randomNumberArray.push(Math.floor(Math.random() * 12) + 1);
+        console.log(randomNumberArray);
+
+        var crystalOneNumber = randomNumberArray[0];
+
+        var crystalTwoNumber = randomNumberArray[1];
+
+        var crystalThreeNumber = randomNumberArray[2];
+
+        var crystalFourNumber = randomNumberArray[3];
+
+    } 
+    
+}*/
+
 
