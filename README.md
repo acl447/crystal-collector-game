@@ -1,4 +1,4 @@
-# unit-4-game
+# crystal-collector-game
 
 You will be given a random number at the start of the game.
 
@@ -9,3 +9,5 @@ You win the game by matching your total score to random number. You lose the gam
 The value of each crystal is hidden from you until you click on it.
 
 Each time when the game starts, the game will change the value of each crystal.
+
+Link to deployed project on GitHub Pages: https://acl447.github.io/crystal-collector-game/
